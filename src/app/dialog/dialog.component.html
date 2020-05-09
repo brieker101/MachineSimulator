@@ -1,0 +1,9 @@
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Link Operation</mat-label>
+    <input matInput [(ngModel)]="data.operation">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (keydown.enter)="onNoClick()" [mat-dialog-close]="data.operation" cdkFocusInitial>Okay</button>
+</div>

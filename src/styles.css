@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+app-options mat-card mat-form-field {
+  margin: 0 0 0 1vw;
+  width: 12vw;
+}
+
+app-options mat-card {
+  margin-top: -10px;
+}
+
+app-options mat-button-toggle-group {
+  float: right;
+}
+
+app-node-board {
+  height: 10vh;
+  width: 10vw;
+}

@@ -1,0 +1,34 @@
+<mat-card>
+
+	<mat-form-field>
+		<mat-label>Machine Type</mat-label>
+		<mat-select id="machineType">
+			<mat-option (click)="showFields()" value="turingMachine">Turing Machine</mat-option>
+		</mat-select>
+	</mat-form-field>
+
+	<mat-form-field *ngIf="showFormFields">
+		<mat-label>Elements in Language</mat-label>
+		<input matInput id="elements" placeholder="Alphanumeric separated by commas">
+	</mat-form-field>
+
+	<mat-form-field *ngIf="showFormFields">
+		<mat-label>Node Label</mat-label>
+		<input matInput #label id="nodeLabel" placeholder="Single alphabetic Character" />
+		<div [hidden]="!neverShow" id="nodeValue">{{label.value}}</div>
+	</mat-form-field>
+
+	<mat-form-field *ngIf="showFormFields">
+		<mat-label>Input String</mat-label>
+		<input matInput id="inputString" placeholder="String of elements from language" />
+	</mat-form-field>
+
+
+	<mat-button-toggle-group id="modes " #group="matButtonToggleGroup">
+		<mat-button-toggle id="add" value="add">Add Mode</mat-button-toggle>
+		<mat-button-toggle id="link" value="link">Link Mode</mat-button-toggle>
+		<mat-button-toggle id="remove" value="remove">Remove Mode</mat-button-toggle>
+	</mat-button-toggle-group>
+	<div [hidden]="!neverShow" id="value">{{group.value}}</div>
+
+</mat-card>

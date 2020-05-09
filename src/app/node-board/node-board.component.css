@@ -1,0 +1,11 @@
+svg{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+circle{
+    z-index: 3;
+}
+line{
+    z-index: 2;
+}
